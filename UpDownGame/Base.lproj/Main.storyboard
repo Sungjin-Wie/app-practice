@@ -24,7 +24,7 @@
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DxP-4G-ECS"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XZ-yc-QZn" userLabel="CheckButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XZ-yc-QZn" userLabel="HitButton">
                                 <rect key="frame" x="410" y="238" width="76" height="52.5"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
@@ -119,7 +119,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentValueLabel" destination="lUR-Gg-FBf" id="g9T-el-E5s"/>
+                        <outlet property="maximumValueLabel" destination="ONo-Lg-oSP" id="l9l-cT-UVP"/>
+                        <outlet property="minimumValueLabel" destination="MUY-yH-Znw" id="PP5-Td-hrx"/>
                         <outlet property="slider" destination="tuB-yH-Zue" id="bx6-pQ-1Uh"/>
+                        <outlet property="tryCountLabel" destination="iWh-yr-XQh" id="pcO-YJ-s5k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
