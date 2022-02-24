@@ -49,8 +49,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchUpResetButton(_ sender: UIButton) {
-        slider.value = (slider.maximumValue + slider.minimumValue) / 2
-        reset()
+        showAlert(message: "리셋되었습니다.")
     }
     
     func reset() {
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
         tryCountLabel.text = "\(tryCount) / 5"
         slider.minimumValue = 0
         slider.maximumValue = 30
-        slider.value = 15
+        slider.value = (slider.maximumValue + slider.minimumValue) / 2
         minimumValueLabel.text = "\(Int(slider.minimumValue))"
         maximumValueLabel.text = "\(Int(slider.maximumValue))"
         currentValueLabel.text = "\(Int(slider.value))"
