@@ -37,7 +37,7 @@
                     <tabBarItem key="tabBarItem" title="First" image="cloud" catalog="system" id="0W7-w6-0wl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="webView" destination="cp9-FC-diB" id="CXe-8L-s8S"/>
+                        <outlet property="wkWebView" destination="cp9-FC-diB" id="v9Z-pR-DkX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

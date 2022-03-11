@@ -31,7 +31,7 @@
         <scene sceneID="1Jb-ak-22T">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="FirstPageViewController" storyboardName="FirstPage" referencedIdentifier="FirstPageViewController" id="092-lx-Qx4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="terminal" catalog="system" id="JpE-q5-Fny"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="JpE-q5-Fny"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6W-ac-Wuf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="2dv-rO-IQR">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="SecondPageViewController" storyboardName="SecondPage" referencedIdentifier="SecondPageViewController" id="ZiZ-vP-qYD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="sun.and.horizon" catalog="system" id="bo7-Os-E2F"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="bo7-Os-E2F"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N8h-bf-cZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
         <scene sceneID="aav-2D-63c">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="ThirdPageViewController" storyboardName="ThirdPage" referencedIdentifier="ThirdPageViewController" id="8gX-ek-NjG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="moon" catalog="system" id="hAo-LI-Eco"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="hAo-LI-Eco"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dco-em-ghy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,9 +59,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="moon" catalog="system" width="128" height="121"/>
-        <image name="sun.and.horizon" catalog="system" width="128" height="80"/>
-        <image name="terminal" catalog="system" width="128" height="93"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
