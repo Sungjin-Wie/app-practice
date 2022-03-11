@@ -18,7 +18,7 @@ class FirstPageViewController: UIViewController {
     }
     
     func configure() {
-        if let url = URL(string: "https://ontheflea.com") {
+        if let url = URL(string: "https://naver.com") {
             let request = URLRequest(url: url)
             webView.load(request)
         }
