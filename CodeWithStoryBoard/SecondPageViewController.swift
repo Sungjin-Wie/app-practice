@@ -21,33 +21,47 @@ class SecondPageViewController: UIViewController {
     let tableView = UITableView()
     let scrollView = UIScrollView()
     let mainStackView = UIStackView()
-    
-    var userLists: [Todo] = []
+    var todoLists: [Todo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        LoadingService.showLoading()
         setupScrollView()
         getData()
     }
     
     
-    func setupMainStackView(list todoList: [Todo]){
+    func setupMainStackView(){
         mainStackView.axis = .vertical
         mainStackView.distribution = .equalSpacing
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(mainStackView)
-        // 1
         let contentLayoutGuide = scrollView.contentLayoutGuide
         NSLayoutConstraint.activate([
-            // 2
             mainStackView.widthAnchor.constraint(equalTo: view.widthAnchor),
             mainStackView.topAnchor.constraint(equalTo: contentLayoutGuide.topAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: contentLayoutGuide.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: contentLayoutGuide.trailingAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: contentLayoutGuide.bottomAnchor)
         ])
-        setupButtons(list: todoList)
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 30
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        self.todoLists.forEach { todo in
+            let button = createButtons(todo: todo)
+            stackView.addArrangedSubview(button)
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.widthAnchor.constraint(equalTo: stackView.widthAnchor, constant: -100).isActive = true
+        }
+        mainStackView.addArrangedSubview(stackView)
+        NSLayoutConstraint.activate([
+            stackView.widthAnchor.constraint(equalTo: mainStackView.widthAnchor),
+            stackView.heightAnchor.constraint(equalTo: mainStackView.heightAnchor)
+        ])
     }
     
     func createButtons(todo: Todo, color: UIColor = .blue) -> UIButton{
@@ -59,27 +73,6 @@ class SecondPageViewController: UIViewController {
         return button
     }
     
-    func setupButtons(list todoList: [Todo]){
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 30
-        stackView.axis = .vertical
-        stackView.alignment = .center
-        //        addHeightPaddingToArrangedSubView(to: stackView, height: 30)
-        todoList.forEach { todo in
-            let button = createButtons(todo: todo)
-            stackView.addArrangedSubview(button)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.widthAnchor.constraint(equalTo: stackView.widthAnchor, constant: -100).isActive = true
-            //            addHeightPaddingToArrangedSubView(to: stackView, height: 30)
-        }
-        mainStackView.addArrangedSubview(stackView)
-        NSLayoutConstraint.activate([
-            stackView.widthAnchor.constraint(equalTo: mainStackView.widthAnchor),
-            stackView.heightAnchor.constraint(equalTo: mainStackView.heightAnchor)
-        ])
-    }
     
     func setupScrollView(){
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -106,8 +99,9 @@ class SecondPageViewController: UIViewController {
                 switch response.result {
                 case .success(let data):
                     do {
-                        self.userLists = try JSONDecoder().decode([Todo].self, from: data)
-                        self.setupMainStackView(list: self.userLists)
+                        self.todoLists = try JSONDecoder().decode([Todo].self, from: data)
+                        self.setupMainStackView()
+                        LoadingService.hideLoading()
                     } catch {
                         print(error)
                     }

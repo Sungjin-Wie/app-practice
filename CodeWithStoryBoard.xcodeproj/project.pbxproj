@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC19E37727DF39EC00C641CA /* loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC19E37627DF39EC00C641CA /* loading.swift */; };
 		ECC2B30627DB17F0002A5D59 /* FirstPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC2B30527DB17F0002A5D59 /* FirstPage.storyboard */; };
 		ECC2B30827DB17F9002A5D59 /* SecondPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC2B30727DB17F9002A5D59 /* SecondPage.storyboard */; };
 		ECC2B30A27DB1802002A5D59 /* ThirdPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC2B30927DB1802002A5D59 /* ThirdPage.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC19E37627DF39EC00C641CA /* loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loading.swift; sourceTree = "<group>"; };
 		ECC2B30527DB17F0002A5D59 /* FirstPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstPage.storyboard; sourceTree = "<group>"; };
 		ECC2B30727DB17F9002A5D59 /* SecondPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondPage.storyboard; sourceTree = "<group>"; };
 		ECC2B30927DB1802002A5D59 /* ThirdPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdPage.storyboard; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				ECF8AB9A27D714D6007378C9 /* Assets.xcassets */,
 				ECF8AB9C27D714D6007378C9 /* LaunchScreen.storyboard */,
 				ECF8AB9F27D714D6007378C9 /* Info.plist */,
+				EC19E37627DF39EC00C641CA /* loading.swift */,
 			);
 			path = CodeWithStoryBoard;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				ECC2B30C27DB182E002A5D59 /* FirstPageViewController.swift in Sources */,
 				ECF8AB9627D714D4007378C9 /* ViewController.swift in Sources */,
 				ECF8AB9227D714D4007378C9 /* AppDelegate.swift in Sources */,
+				EC19E37727DF39EC00C641CA /* loading.swift in Sources */,
 				ECC2B31027DB1850002A5D59 /* ThirdPageViewController.swift in Sources */,
 				ECF8AB9427D714D4007378C9 /* SceneDelegate.swift in Sources */,
 				ECC2B30E27DB183A002A5D59 /* SecondPageViewController.swift in Sources */,
